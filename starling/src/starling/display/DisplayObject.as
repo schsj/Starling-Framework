@@ -382,12 +382,12 @@ package starling.display
             mOrientationChanged = true;
             
             if (hAlign == HAlign.LEFT)        mPivotX = bounds.x;
-            else if (hAlign == HAlign.CENTER) mPivotX = bounds.x + bounds.width / 2.0;
+            else if (hAlign == HAlign.CENTER) mPivotX = bounds.x + Math.floor(bounds.width / 2.0);
             else if (hAlign == HAlign.RIGHT)  mPivotX = bounds.x + bounds.width; 
             else throw new ArgumentError("Invalid horizontal alignment: " + hAlign);
             
             if (vAlign == VAlign.TOP)         mPivotY = bounds.y;
-            else if (vAlign == VAlign.CENTER) mPivotY = bounds.y + bounds.height / 2.0;
+            else if (vAlign == VAlign.CENTER) mPivotY = bounds.y + Math.floor(bounds.height / 2.0);
             else if (vAlign == VAlign.BOTTOM) mPivotY = bounds.y + bounds.height;
             else throw new ArgumentError("Invalid vertical alignment: " + vAlign);
         }
